@@ -1,0 +1,10 @@
+export const ORRDER_DETAIL = "OrderDetail";
+export const ORDER_LOG_TIME = "OrderLogTime";
+export const ORDER = "store_orders";
+export const STORE = "stores";
+export const STORE_GROUP = "store_groups";
+export const STORE_STOREGROUP = "store_storegroup";
+export const STORE_USER = "store_user";
+export const STORE_GROUP_USER = "storegroup_user";
+export const STORE_TARGET_MODEL = "store_targets";
+export const STORE_PRODUCT_MODEL = "store_products";

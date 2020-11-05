@@ -1,0 +1,36 @@
+{
+  "extends": [
+    "eslint:recommended"
+  ],
+  "plugins": [
+    "import"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2017,
+    "sourceType": "module"
+  },
+  "env": {
+    "es6": true,
+    "node": true,
+    "jest": true
+  },
+  "rules": {
+    "brace-style": "off",
+    "max-len": "off",
+    "no-console": 0,
+    "no-unused-vars": ["error", { "vars": "all", "args": "none", "ignoreRestSiblings": false }],
+    "no-tabs": "off",
+    "new-cap": "off",
+    "no-use-before-define": ["error", { "functions": true, "classes": true }],
+    "linebreak-style": "off",
+    "no-invalid-this": "off",
+    "quotes": ["error", "double"],
+    "prefer-arrow-callback": ["error"],
+    "camelcase": ["warn", { "properties": "always" }],
+    "eslint.autoFixOnSave": true,
+    "prefer-const": ["warn", {
+      "destructuring": "any",
+      "ignoreReadBeforeAssign": false
+    }]
+  }
+}

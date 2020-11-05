@@ -1,0 +1,22 @@
+version: "2"
+services:
+  app:
+    container_name: cpos-management-basecode-app
+    build:
+      context: .
+      dockerfile: .docker/Dockerfile-dev
+    volumes:
+      - ./server:/usr/src/app/server
+      - ./package.json:/usr/src/app/package.json
+    ports:
+      - 9030:9030
+    links:
+      - mongodb
+
+  mongodb:
+    container_name: cpos-management-mongodb
+    image: mongo:4.0
+    volumes:
+      - ./.docker/mongodb/mongo-init.js:/setup/mongo-init.js
+    ports:
+      - "27012:27017"

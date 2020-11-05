@@ -1,0 +1,59 @@
+GetStoreTarget 
+-- API GET STORE LIST
+PATH: {url:port}/store/storetarget 
+Request:
+{
+	storeGroupUUID : "group ID or null to get all list",
+	storeType : "store type ENUM or null to get all list", // Ext PHR 
+	monthlyTarget : "1 or 0 to check or not check",
+	dailyTarget : "1 or 0 to check or not check",
+	page : '1 page number',
+	pageSize: 8
+}
+
+Response: 
+{
+	stores:[
+		{
+			storeCode: "12343',
+    		storeUUID: 'idStore',
+    		storeName: 'name store',
+    		storeGroup: 'group abc',
+    		storeDayTarget: '1234455',
+    		storeMonTarget: '12333333445'
+		}
+	],
+	total: 11111
+}
+
+
+-- API GET STORE DESCRIPTION
+PATH: {url:port}/store/:id  
+Request:
+{}
+Response:
+{
+	storeCode: "12343',
+   	storeUUID: 'idStore',
+   	storeName: 'name store',
+   	storeGroup: 'group abc',
+   	storeDayTarget: '1234455',
+   	storeMonTarget: '12333333445'
+}
+
+
+-- API GET STORE GROUP LIST
+PATH: {url:port}/store/storetarget/option
+Request:
+{}
+Response:
+{
+	storeGroups:[
+		'storeName':'name of group',
+		'storeGroupUUID':'id of group'
+	],
+	storeTypes:[
+		'storeType':'name of group',
+		'storeTypeUUID':'id of group'
+	]
+}
